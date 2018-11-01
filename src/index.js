@@ -11,7 +11,7 @@ import registerServiceWorker from './registerServiceWorker';
 
 const sagaMiddleware = createSagaMiddleware();
 const store = createStore(storeApp, applyMiddleware(sagaMiddleware));
-sagaMiddleware.run(...sagas);
+sagaMiddleware.run(sagas);
 
 ReactDOM.render(
   <Provider store={store}>
